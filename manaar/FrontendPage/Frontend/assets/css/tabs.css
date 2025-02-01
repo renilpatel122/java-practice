@@ -1,0 +1,65 @@
+
+  
+  
+  .tabs {
+    /* Step 1: Enable Flex on the container */
+    display: flex;
+    
+    /* Step 2: Enable flex-wrap to put content section below tab label */
+    flex-wrap: wrap;
+  }
+  .tabs > section {  
+    /* Step 3: Move content <section> to the end, after the tab labels */
+    order: 999;
+    
+    /* Step 4: Make sure the content <section> is 100% width */
+    width: 100%;
+    
+    /* Step 5: Hide all content <section> by default */
+    display: none;
+  }
+  .tabs > input {
+    /* display: none; Don’t use display:none. Bad for accessibility */
+    
+    /* Step 6: Hide the radio inputs */
+    opacity: 0;
+    
+    /* Step 7: Make sure the radio inputs don’t take up space in layout */
+    position: absolute;
+  }
+  /* Step 8: Select the label right next to the selected input */
+  .tabs > input[type=radio]:checked + label {
+    /* Step 9: Highlight the selected label */
+    background: yellow;
+  }
+  /* Step 10: Select the section right next to the label which is next to the selected input */
+  .tabs > input[type=radio]:checked + label + section {
+    /* Step 11: Unset the 'display:none' we did in step 5 */
+    display: unset;
+    padding: 0;
+  }
+  
+  /* Done. Make sure to disable the debug code at the beginning of CSS. And now it is time to make the tabs look good */
+  
+  /* Make the tabs look good */
+  /* Final Step: Make the tabs pretty with padding and colors */
+  
+  .tabs > label {
+    padding: .5em 1em;
+    background: #665936;
+    border-right: 1px solid #a08f62;
+    color: white;
+  }
+  .tabs > label:last-of-type {
+    border-right: none;
+  }
+  .tabs > input[type=radio]:checked + label {
+    background: #a08f62;
+  } 
+  
+  .tabs section {
+    border: 1px #a08f62 solid;
+    border-top: 5px #a08f62 solid;
+    padding: 1em;
+  }
+  
