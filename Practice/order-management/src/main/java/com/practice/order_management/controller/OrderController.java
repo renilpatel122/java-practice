@@ -5,11 +5,12 @@ import com.practice.order_management.entity.Order;
 import com.practice.order_management.service.OrderService;
 import com.practice.order_management.utill.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.json.GsonJsonParser;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/orders")
@@ -19,12 +20,14 @@ public class OrderController {
     private OrderService orderService;
 
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<ApiResponse<Order>> createOrder(@RequestBody Order order) {
         Order createdOrder = orderService.createOrder(order);
         return ResponseEntity.ok(ApiResponse.success(createdOrder, "Order created successfully"));
     }
 
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @GetMapping
     public  ResponseEntity<ApiResponse<List<Order>>> getAllOrder() {
         return ResponseEntity.ok(ApiResponse.success(orderService.getAllOrders(), "Order created successfully"));
@@ -36,6 +39,7 @@ public class OrderController {
         return ResponseEntity.ok(ApiResponse.success(createdOrder, "Order created successfully"));
     }
 
+//    @PreAuthorize("hasAuthority('ROLE_ADMIN', 'ROLE_USER')")
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<Order>> getOrder(@PathVariable Long id) {
         Order order = orderService.getOrderById(id);

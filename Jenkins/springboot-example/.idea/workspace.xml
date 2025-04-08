@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="750e27ea-63cf-4e20-8187-4b834554f7b6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Jasper prac/backend/src/main/java/com/jasperdemo/report/DTO/Parameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jenkins" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javatechie/prac/SpringbootDemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-staging.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/security/IsUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/security/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/service/CustomUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/.github/workflows/deploy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/railway.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../microservice/microservice-new/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Master Microserivce/accounts/accounts/src/main/java/in/bank/accounts/model/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Master Microserivce/accounts/accounts/src/main/java/in/bank/accounts/model/Accounts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Master Microserivce/accounts/accounts/src/main/java/in/bank/accounts/model/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Master Microserivce/accounts/accounts/src/main/java/in/bank/accounts/model/Customers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Master Microserivce/accounts/accounts/src/main/java/in/bank/accounts/repository/AccountsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Master Microserivce/accounts/accounts/src/main/java/in/bank/accounts/repository/AccountsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/order-management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/order-management/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/config/KafkaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/config/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/config/KafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/config/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/config/RabbitMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/config/RabbitMQConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/config/RabbitMQConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/service/Impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/service/Impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/utill/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/java/com/practice/order_management/utill/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/order-management/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/order-management/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/src/main/java/com/example/spring_security/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/src/main/java/com/example/spring_security/config/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/src/main/java/com/example/spring_security/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/src/main/java/com/example/spring_security/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/src/main/java/com/example/spring_security/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/src/main/java/com/example/spring_security/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/src/main/java/com/example/spring_security/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/src/main/java/com/example/spring_security/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practice/spring-security/spring-security/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../microservice/microservice-new/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../microservice/microservice-new/inventory-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../microservice/microservice-new/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../microservice/microservice-new/inventory-service/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2t1gddUBB1fDeCjSmKDEgBsBXrO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.SpringbootDemoApplication.executor": "Run",
+    "Maven.springboot-k8s-demo [clean,install].executor": "Run",
+    "Maven.springboot-k8s-demo [clean].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Lenovo/RenilPatel/Jenkins/springboot-example"
+  }
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="SpringbootDemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.javatechie.prac.SpringbootDemoApplication" />
+      <module name="springboot-k8s-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.javatechie.prac.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="springboot-example" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="springboot-example" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SpringbootDemoApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="750e27ea-63cf-4e20-8187-4b834554f7b6" name="Changes" comment="" />
+      <created>1739525083250</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739525083250</updated>
+    </task>
+    <servers />
+  </component>
+</project>

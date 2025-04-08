@@ -6,8 +6,9 @@ import com.practice.order_management.repository.OrderRepository;
 import com.practice.order_management.service.OrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
+//import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +24,12 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private OrderRepository orderRepository;
 //    private final RabbitTemplate rabbitTemplate;
-//    private final KafkaTemplate<String, String> kafkaTemplate;
+    private final KafkaTemplate<String, String> kafkaTemplate;
+
+    @Autowired
+    public OrderServiceImpl(KafkaTemplate<String, String> kafkaTemplate) {
+        this.kafkaTemplate = kafkaTemplate;
+    }
 
 //    @Autowired
 //    public OrderServiceImpl(OrderRepository orderRepository,
@@ -41,7 +47,7 @@ public class OrderServiceImpl implements OrderService {
 
         String notificationMessage = "New Order Created: " + savedOrder.getId();
 //        rabbitTemplate.convertAndSend("order.queue", notificationMessage);
-//        kafkaTemplate.send("order.topic", notificationMessage);
+        kafkaTemplate.send("order.topic", notificationMessage);
         // Publish to RabbitMQ
         try {
 //            rabbitTemplate.convertAndSend("order.queue", notificationMessage);
@@ -52,7 +58,7 @@ public class OrderServiceImpl implements OrderService {
 
         // Publish to Kafka
         try {
-//            kafkaTemplate.send("order.topic", notificationMessage);
+            kafkaTemplate.send("order.topic", notificationMessage);
         } catch (Exception e) {
             logger.error("Error publishing to Kafka: {}", e.getMessage());
         }

@@ -1,7 +1,6 @@
 package in.bank.accounts.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -14,8 +13,10 @@ import java.time.LocalDate;
 @ToString
 public class Accounts {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "customer_id")
-    private int customerId;
+    private Long customerId;
 
     @Column(name = "account_type")
     private String accountType;

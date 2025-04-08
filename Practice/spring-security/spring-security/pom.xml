@@ -83,23 +83,7 @@
 
 		<!-- Jakarta Dependencies -->
 
-		<dependency>
-			<groupId>jakarta.validation</groupId>
-			<artifactId>jakarta.validation-api</artifactId>
-			<version>3.0.0</version>
-		</dependency>
-		<!-- Jakarta Annotations -->
-		<dependency>
-			<groupId>jakarta.annotation</groupId>
-			<artifactId>jakarta.annotation-api</artifactId>
-			<version>2.1.1</version>
-		</dependency>
-		<!-- Jakarta Servlet (if necessary) -->
-		<dependency>
-			<groupId>jakarta.servlet</groupId>
-			<artifactId>jakarta.servlet-api</artifactId>
-			<version>5.0.0</version>
-		</dependency>
+
 
 		<!-- Database -->
 		<dependency>
@@ -114,11 +98,7 @@
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.1.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.openapitools</groupId>
-			<artifactId>jackson-databind-nullable</artifactId>
-			<version>0.2.6</version>
-		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -145,29 +125,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 
-			<!-- OpenAPI Generator -->
-			<plugin>
-				<groupId>org.openapitools</groupId>
-				<artifactId>openapi-generator-maven-plugin</artifactId>
-				<version>6.6.0</version>
-				<executions>
-					<execution>
-						<id>generate-api-code</id>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							<inputSpec>${project.basedir}/src/main/resources/openapi.yaml</inputSpec>
-							<output>${project.build.directory}/generated-sources/api</output>
-							<generatorName>spring</generatorName>
-							<additionalProperties>
-								<useJakarta>true</useJakarta>
-								<library>spring</library>
-							</additionalProperties>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+
 
 		</plugins>
 	</build>

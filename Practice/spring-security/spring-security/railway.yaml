@@ -1,0 +1,4 @@
+services:
+  - name: spring-boot-app
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/*.jar

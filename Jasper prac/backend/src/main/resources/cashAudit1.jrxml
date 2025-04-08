@@ -1,0 +1,392 @@
+<jasperReport
+        name="Flower_Landscape"
+        language="java"
+        pageWidth="842"
+        pageHeight="600"
+        orientation="Landscape"
+        columnWidth="802"
+        leftMargin="20"
+        rightMargin="10"
+        topMargin="10"
+        bottomMargin="10">
+    <parameter name="DTO1DataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+    <parameter name="DTO2DataSource" class = "com.jasperdemo.report.entity.CashAuditHeader"/>
+
+
+    <field name="docnumber" class="java.lang.String"/>
+    <field name="customer" class="java.lang.String"/>
+    <field name="name" class="java.lang.String"/>
+    <field name="docRef" class="java.lang.String"/>
+    <field name="batch" class="java.lang.String"/>
+    <field name="docId" class="java.lang.String"/>
+    <field name="currency" class="java.lang.String"/>
+    <field name="curramt" class="java.lang.Double"/>
+    <field name="discount" class="java.lang.Double"/>
+    <field name="docdate" class="java.time.LocalDate"/>
+    <field name="baseTotal" class="java.lang.Double"/>
+    <field name="totalAmount" class="java.lang.Double"/>
+    <field name="totalDiscount" class="java.lang.Double"/>
+
+<!--    <field name="batchId" class="java.lang.String"/>-->
+<!--    <field name="yearNo" class="java.lang.Double"/>-->
+<!--    <field name="period" class="java.lang.Double"/>-->
+<!--    <field name="batchDate" class="java.lang.String"/>-->
+<!--    <field name="userId" class="java.lang.String"/>-->
+<!--    <field name="batchledger" class="java.lang.String"/>-->
+<!--    <field name="batchCurrency" class="java.lang.String"/>-->
+
+    <background/>
+
+    <!-- Title Section -->
+    <title>
+        <band height="50">
+            <staticText>
+                <reportElement x="300" y="0" width="400" height="50" forecolor="#006699" backcolor="#006699"/>
+                <textElement>
+                    <font size="24"/>
+                </textElement>
+                <text><![CDATA[Accounts Receivable Cash Audit]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <!-- Page Header Section -->
+    <pageHeader>
+        <band height = "150">
+
+
+            <frame>
+                <reportElement x="0" y="0" width="900" height="80"/>
+
+                <staticText>
+                    <reportElement x="0" y="0" width="80" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Batch:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="80" y="0" width="120" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{DTO2DataSource}.getBatch()]]></textFieldExpression>
+                </textField>
+
+                <staticText>
+                    <reportElement x="220" y="0" width="80" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Year:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="300" y="0" width="120" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[(int) Math.round($P{DTO2DataSource}.getYearno())]]></textFieldExpression>
+                </textField>
+
+                <staticText>
+                    <reportElement x="440" y="0" width="80" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Period:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="520" y="0" width="120" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[(int) Math.round($P{DTO2DataSource}.getPeriod())]]></textFieldExpression>
+                </textField>
+
+                <staticText>
+                    <reportElement x="0" y="30" width="80" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Batch Date:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="80" y="30" width="120" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{docdate}]]></textFieldExpression>
+                </textField>
+
+                <staticText>
+                    <reportElement x="220" y="30" width="80" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[User ID:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="300" y="30" width="120" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{DTO2DataSource}.getUuserid()]]></textFieldExpression>
+                </textField>
+
+                <staticText>
+                    <reportElement x="440" y="30" width="80" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Ledger:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="520" y="30" width="120" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{DTO2DataSource}.getLedger()]]></textFieldExpression>
+                </textField>
+
+                <staticText>
+                    <reportElement x="660" y="30" width="80" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Currency:]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="740" y="30" width="80" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{DTO2DataSource}.getCurrency()]]></textFieldExpression>
+                </textField>
+            </frame>
+        </band>
+    </pageHeader>
+
+
+    <!-- Column Header Section -->
+    <columnHeader>
+        <band height="60">
+            <frame>
+                <reportElement x="1" y="0" width="880" height="40"/>
+                <staticText>
+                    <reportElement x="1" y="0" width="79" height="30"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Doc Number]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="81" y="0" width="79" height="30"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Customer Code]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="160" y="0" width="79" height="30"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Customer Name]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="239" y="0" width="79" height="30"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Doc Ref]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="318" y="0" width="79" height="30"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Batch]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="397" y="0" width="79" height="30"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Doc Id]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="476" y="0" width="79" height="30"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Currency]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="555" y="0" width="79" height="30"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Doc Total]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="634" y="0" width="79" height="30"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Discount]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="713" y="0" width="79" height="30"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Doc Date]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="792" y="0" width="79" height="30"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Base Total]]></text>
+                </staticText>
+            </frame>
+        </band>
+    </columnHeader>
+
+    <!-- Detail Section -->
+    <detail>
+        <band height="60"> <!-- Increased band height -->
+            <textField>
+                <reportElement x="1" y="0" width="820" height="30"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{docnumber}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="82" y="0" width="80" height="30"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{customer}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="162" y="0" width="80" height="30"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="242" y="0" width="80" height="30"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{docRef}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="322" y="0" width="80" height="30"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{batch}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="402" y="0" width="80" height="30"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{docId}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="482" y="0" width="80" height="30"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{currency}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="562" y="0" width="80" height="30"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{baseTotal}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="642" y="0" width="80" height="30"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{discount}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="722" y="0" width="80" height="30"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{docdate}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="802" y="0" width="80" height="30"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{baseTotal}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <pageFooter>
+        <band height="50">
+            <frame>
+                <reportElement x="0" y="0" width="900" height="50"/>
+
+                <!-- Columns for Total Cash, Total Discount, Base Total -->
+                <staticText>
+                    <reportElement x="0" y="0" width="220" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Total Cash]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="220" y="0" width="220" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{totalAmount}]]></textFieldExpression>
+                </textField>
+
+                <staticText>
+                    <reportElement x="0" y="25" width="220" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Total Discount]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="220" y="25" width="220" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{totalDiscount}]]></textFieldExpression>
+                </textField>
+
+                <staticText>
+                    <reportElement x="440" y="0" width="220" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Base Total]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="660" y="0" width="220" height="20"/>
+                    <textElement>
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{totalAmount}]]></textFieldExpression>
+                </textField>
+            </frame>
+        </band>
+    </pageFooter>
+
+</jasperReport>

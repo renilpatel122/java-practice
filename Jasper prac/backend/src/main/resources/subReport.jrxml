@@ -1,0 +1,133 @@
+<jasperReport name="subReport"
+              pageWidth="400"
+              pageHeight="300"
+              columnWidth="380"
+              leftMargin="10"
+              rightMargin="10"
+              topMargin="10"
+              bottomMargin="10">
+
+    <parameter name="DTO2DataSource" class="java.util.List"/>
+    <field name="batchId" class="java.lang.String"/>
+    <field name="yearNo" class="java.lang.Double"/>
+    <field name="period" class="java.lang.Double"/>
+    <field name="batchDate" class="java.lang.String"/>
+    <field name="userId" class="java.lang.String"/>
+    <field name="batchledger" class="java.lang.String"/>
+    <field name="batchCurrency" class="java.lang.String"/>
+
+    <pageHeader>
+
+
+    <band height="80">
+    <frame>
+        <reportElement x="0" y="0" width="900" height="80"/>
+
+        <staticText>
+            <reportElement x="0" y="0" width="80" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <text><![CDATA[Batch:]]></text>
+        </staticText>
+        <textField>
+            <reportElement x="80" y="0" width="120" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <textFieldExpression><![CDATA[$P{batchId}]]></textFieldExpression>
+        </textField>
+
+        <staticText>
+            <reportElement x="220" y="0" width="80" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <text><![CDATA[Year:]]></text>
+        </staticText>
+        <textField>
+            <reportElement x="300" y="0" width="120" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <textFieldExpression><![CDATA[$F{yearNo}]]></textFieldExpression>
+        </textField>
+
+        <staticText>
+            <reportElement x="440" y="0" width="80" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <text><![CDATA[Period:]]></text>
+        </staticText>
+        <textField>
+            <reportElement x="520" y="0" width="120" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <textFieldExpression><![CDATA[$F{period}]]></textFieldExpression>
+        </textField>
+
+        <staticText>
+            <reportElement x="0" y="30" width="80" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <text><![CDATA[Batch Date:]]></text>
+        </staticText>
+        <textField>
+            <reportElement x="80" y="30" width="120" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <textFieldExpression><![CDATA[$F{batchDate}]]></textFieldExpression>
+        </textField>
+
+        <staticText>
+            <reportElement x="220" y="30" width="80" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <text><![CDATA[User ID:]]></text>
+        </staticText>
+        <textField>
+            <reportElement x="300" y="30" width="120" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <textFieldExpression><![CDATA[$F{userId}]]></textFieldExpression>
+        </textField>
+
+        <staticText>
+            <reportElement x="440" y="30" width="80" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <text><![CDATA[Ledger:]]></text>
+        </staticText>
+        <textField>
+            <reportElement x="520" y="30" width="120" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <textFieldExpression><![CDATA[$F{batchledger}]]></textFieldExpression>
+        </textField>
+
+        <staticText>
+            <reportElement x="660" y="30" width="80" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <text><![CDATA[Currency:]]></text>
+        </staticText>
+        <textField>
+            <reportElement x="740" y="30" width="80" height="20"/>
+            <textElement>
+                <font size="12"/>
+            </textElement>
+            <textFieldExpression><![CDATA[$F{batchCurrency}]]></textFieldExpression>
+        </textField>
+    </frame>
+    </band>
+    </pageHeader>
+</jasperReport>
