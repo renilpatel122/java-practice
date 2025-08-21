@@ -1,0 +1,70 @@
+/* Updated CSS for UserInput and Report */
+.report {
+  border: 2px solid black;
+}
+
+.user {
+  border: 2px solid black;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f9;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input {
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the Date Range section */
+.date-range {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.date-range input {
+  width: 45%; /* Adjusts the width of each date input */
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+}
